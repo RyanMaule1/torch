@@ -8,6 +8,7 @@ Torch is a CLI-based project initializer and workflow generator for multi-agent 
 - Provide a CLI (`torch init`) for project setup/configuration.
 - Support basic GitHub integration hooks for branch creation, commits, and PR creation.
 - Track token usage per agent with optional ASCII visualization.
+- Start a direct terminal chat loop with selectable OpenAI models.
 
 ## Project Structure
 
@@ -36,6 +37,7 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python cli.py init
+python cli.py chat
 ```
 
 ## CLI: `torch init`
@@ -49,6 +51,15 @@ The init command prompts for:
 - Token budget
 
 It writes `project_config.json` by default.
+
+## CLI: `torch chat`
+
+The chat command:
+- Lists a small starter set of OpenAI models.
+- Prompts for your model selection.
+- Prompts for your OpenAI API key.
+- Optionally accepts a seed prompt before the interactive loop starts.
+- Lets you paste prompts directly into the terminal and prints model responses.
 
 ## Example Config
 
